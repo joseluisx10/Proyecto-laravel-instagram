@@ -32,3 +32,4 @@ Route::post('/user/update', [userController::class, 'update'])->name('user.updat
 Route::get('/user/avatar/{filename}', [userController::class, 'getImage'])->name('user.avatar');
 Route::get('/subir-imagen', [ImageController::class, 'create'])->name('image.create');
 Route::post('/image/save',[ImageController::class, 'save'])->name('image.save');
+Route::get('/image/file/{filename}', [ImageController::class, 'getImage'])->name('image.file');

@@ -38,7 +38,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/users'),
+            'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,
@@ -46,7 +46,7 @@ return [
         
         'users' => [
             'driver' => 'local',
-            'root' => storage_path('app/images'),
+            'root' => storage_path('app/users'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,

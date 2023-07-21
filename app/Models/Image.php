@@ -24,6 +24,6 @@ class Image extends Model
     //Relacion de Many to One
     //busca en la otra tabla los objetos cuyo id = use_id
     public function user() {
-        return $this->belongsTo('App\User', 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

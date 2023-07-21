@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Subir nueva imagen') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('image.save') }}">
+                    <form method="POST" action="{{ route('image.save') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="row mb-3">
@@ -29,7 +29,7 @@
                             <label for="description" class="col-md-4 col-form-label text-md-end">{{ __('Descripcion') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="description" class="form-control" name="description"></textarea>
+                                <textarea id="description" class="form-control" name="description" required></textarea>
                                 @error('description')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
