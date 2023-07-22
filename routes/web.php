@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Image;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\commentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +35,4 @@ Route::get('/subir-imagen', [ImageController::class, 'create'])->name('image.cre
 Route::post('/image/save',[ImageController::class, 'save'])->name('image.save');
 Route::get('/image/file/{filename}', [ImageController::class, 'getImage'])->name('image.file');
 Route::get('/image/{id}', [ImageController::class, 'detail'])->name('image.detail');
+Route::post('/comment/save',[commentController::class, 'save'])->name('comment.save');
