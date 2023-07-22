@@ -10,10 +10,10 @@ class Like extends Model
     use HasFactory;
     protected $table = 'likes';
     public function user() {
-        return $this->belongsTo('App\User', 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
     
       public function image() {
-        return $this->belongsTo('App\Image', 'image_id');
+        return $this->belongsTo(Image::class, 'image_id');
     }
 }
