@@ -30,8 +30,18 @@
                     <p class="mb-0">{{$image->descripcion}}</p>
                 </div>
                 <div class="d-flex px-4">
-                    <a href=""><i class="bi bi-suit-heart text-danger fs-4 me-2"></i></a>
-                    <p class="mb-0"><a href="" class="btn btn-sm btn-warning">Comentarios ({{count($image->comments)}})</a></p>                    
+                    <?php $user_like=false; ?>
+                    @foreach($image->likes as $like)
+                        @if($like->user->id == Auth::user()->id)
+                            <?php $user_like=true; ?>
+                        @endif
+                    @endforeach
+                    @if($user_like)
+                    <i href="" data-id="{{$image->id}}" class="bi bi-suit-heart text-danger fs-4 btn-dislike me-1"></i>
+                    @else
+                    <i href="" data-id="{{$image->id}}" class="bi bi-suit-heart text-dark fs-4 btn-like me-1"></i>
+                    @endif
+                    <span class="me-2 my-1"><small>{{count($image->likes)}}</small></span>
                 </div>
                 <div class="clearfix"></div>
                 <div class="px-4">
@@ -57,9 +67,16 @@
                     </form>
                     <hr>
                     @foreach($image->comments as $comment)
-                        <span class="text-secondary fw-bold">{{'@'.$comment->user->nick}}</span>
-                        <span class="text-secondary fw-bold">{{' | '.\FormatTime::LongTimeFilter($comment->created_at)}}</span>
-                        <p class="mb-0">{{$comment->content}}</p>
+                    <span class="text-secondary fw-bold mb-1">{{'@'.$comment->user->nick}}</span>
+                    <span class="text-secondary fw-bold mb-1">{{' | '.\FormatTime::LongTimeFilter($comment->created_at)}}</span>
+                    <p class="">{{$comment->content}} <br/>
+
+                        @if(Auth::check() && ($comment->user_id == Auth::user()->id || $comment->image->user_id == Auth::user()->id))
+                        <a href="{{ route('comment.delete', ['id' => $comment->id]) }}" class="btn btn-sm btn-danger">
+                            Eliminar
+                        </a>
+                        @endif
+                    </p>
                     @endforeach
                 </div>
             </div>

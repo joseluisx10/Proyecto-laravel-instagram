@@ -3,21 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/app/Providers/RouteServiceProvider.php</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/app/Providers/EventServiceProvider.php</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/database.sql</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/.env</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/app/Models/User.php</file>
+            <file>file:/C:/xampp/htdocs/proyecto-ude/app/Http/Controllers/ImageController.php</file>
+            <file>file:/C:/xampp/htdocs/proyecto-ude/app/Http/Controllers/LikeController.php</file>
             <file>file:/C:/xampp/htdocs/proyecto-ude/resources/views/home.blade.php</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/app/Providers/BroadcastServiceProvider.php</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/resources/views/layouts/app.blade.php</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/routes/web.php</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/resources/views/user/config.blade.php</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/config/app.php</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/resources/views/auth/register.blade.php</file>
             <file>file:/C:/xampp/htdocs/proyecto-ude/app/Models/Image.php</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/app/Http/Controllers/userController.php</file>
-            <file>file:/C:/xampp/htdocs/proyecto-ude/app/Models/Comment.php</file>
+            <file>file:/C:/xampp/htdocs/proyecto-ude/app/Http/Controllers/commentController.php</file>
+            <file>file:/C:/xampp/htdocs/proyecto-ude/routes/web.php</file>
         </group>
     </open-files>
 </project-private>

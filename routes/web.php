@@ -5,6 +5,7 @@ use App\Models\Image;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\commentController;
+use App\Http\Controllers\LikeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +37,6 @@ Route::post('/image/save',[ImageController::class, 'save'])->name('image.save');
 Route::get('/image/file/{filename}', [ImageController::class, 'getImage'])->name('image.file');
 Route::get('/image/{id}', [ImageController::class, 'detail'])->name('image.detail');
 Route::post('/comment/save',[commentController::class, 'save'])->name('comment.save');
+Route::get('/comment/delete/{id}',[commentController::class, 'delete'])->name('comment.delete');
+Route::get('/like/{image_id}', [LikeController::class, 'like'])->name('like.save');
+Route::get('/dislike/{image_id}', [LikeController::class, 'dislike'])->name('like.delete');
